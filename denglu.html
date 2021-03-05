@@ -1,0 +1,130 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>用户登陆</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script  src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body style="background:url(img/content_img.jpg)" onload="createCode() ">
+<nav class=" navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+        	<div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class=" icon-bar"></span>
+                <span class=" icon-bar"></span>
+                <span class=" icon-bar"></span>
+            </button>
+               
+                <a class="navbar-brand">FLG<span></span></a>
+               
+            </div>
+            <div class="collapse navbar-collapse">
+                    <ul class=" nav navbar-nav" role="tablist" id="mytable" style="padding-left:50px">
+                        <li><a href="index.html">首页</a></li> 
+                        <li ><a href="fuwu.html">真诚服务</a></li> 
+                        <li ><a href="chanpin.html" role="menuitem" tabindex="-1">产品展示</a></li> 	
+                        <li><a href="huiyuan.html">会员作品</a></li> 
+                        <li role="presentation" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我们<span class="caret"></span>                        	<ul class="dropdown-menu " role="menu" aria-labelledby="dropdMenu1">
+                                <li role="presentation"><a href="jianjie.html" role="menuitem" tabindex="-1">公司简介</a></li>
+                               	<li role="presentation"><a href="dongtai.html" role="menuitem" tabindex="-1">公司动态</a></li>
+                                <li role="presentation"><a href="#" role="menuitem" tabindex="-1">联系我们</a></li>
+                            </ul></a>
+                        
+                        </li>
+
+                    </ul>
+                <div class="navbar-form navbar-right" style="font-size:14px">
+                    <a href="#" class="navbar-link">注册</a>
+                    <a href="denglu.html" class="navbar-link">登陆</a>
+                    <input type="text" class=" form-control" placeholder="请输入关键字" />
+                    <button class="btn btn-primary">搜 索</button>
+                </div>
+             </div>
+        </div>
+    </nav>
+<div class="container" style="padding-top:80px; padding-bottom:150px">
+<h1 class=" page-header">用户登陆</h1>
+  <form class="bs-example bs-example-form" role="form" id="form" name="form" method="post" action="首页.html" onsubmit="return show();">
+      <div class="input-group col-lg-4">
+        <span class="input-group-addon"><img src="img/u.png"></span> 
+         <input type="text" class="form-control" placeholder="用户名" id="txt">
+      </div>
+      <br>
+
+      <div class="input-group  col-lg-4">
+      	<span class="input-group-addon"><img src="img/ps.png"></span>
+         <input type="password" class="form-control" placeholder="密码" id="txt1">
+      </div>
+      <br>  
+      <div class="input-group  col-lg-2">
+      <input type="text" class="form-control" placeholder="验证码" id="txt2">
+      	<span class="input-group-addon">
+      	<div><input type="text" size="5" id="yanzhengma" onclick="createCode()"></div></span>
+      </div>
+      <br>
+      <div class="form-group" style="width:800px;">
+          <div style="float:left">
+          <input name="提交" type="submit" class="btn btn-info" onClick="Untitled-1-bt.html" value="登 陆">
+          </div>
+          <div style="float:left; padding-left:50px">
+          <input class="btn btn-info" type="reset" value="重置">
+          </div>
+      </div> 
+   </form>
+   
+</div>
+    <div class="container-fluid" style=" height:150px; padding-top:50px; padding-left:0px; padding-right:0px; background-color: #000">
+        	<p  style="text-align:center; color:#CCC">2015 fengniao.com. All rights reserved. FLG摄影工作室　版权所有 侵权必究</p>
+            <p style="text-align:center; color:#CCC">@作者：刘韩 冯佳节 郭倩</p>
+            <p  style="text-align:center; color:#CCC">2015年12月份完成</p>
+    </div>
+</body>
+<script type="text/javascript">
+var code; //在全局 定义验证码  
+function createCode() {
+  code = "";
+  var codeLength = 4;//验证码的长度  
+  var checkCode = document.getElementById("yanzhengma");
+  var selectChar = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');//所有候选组成验证码的字符，当然也可以用中文的  
+  
+  for (var i = 0; i < codeLength; i++) {
+    var charIndex = Math.floor(Math.random() * 16);
+    code += selectChar[charIndex];
+  }
+  //alert(code);
+  if (checkCode) {
+    checkCode.className = "code";
+    checkCode.value = code;
+  }
+}
+
+function show(){
+	
+	var yhm=document.getElementById('txt').value;
+	if(yhm==''||yhm==null){
+		alert("用户名不能为空");
+		return false;
+		}
+	var mima=document.getElementById('txt1').value;
+	if(mima==''||mima==null){
+		alert("密码不能为空");
+		return false;
+		}
+	  var inputCode = document.getElementById("txt2").value;
+	  if (inputCode==''||inputCode==null) {
+		alert("请输入验证码！");
+		return false;
+	  } else if (inputCode != code) {
+		alert("验证码输入错误！");
+	  createCode();
+	  return false;//刷新验证码  
+	  } else {
+	  return true;
+	  }
+}
+</script>
+</html>

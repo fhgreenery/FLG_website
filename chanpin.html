@@ -1,0 +1,386 @@
+﻿<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>	产品展示</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style type="text/css">
+	    body {
+		font-size: 14px;
+		line-height: 24px;
+		background:url(images/content_img.jpg);
+		color: #fff;
+		background-color: #000;
+		font-family: 'robotolight';
+	}
+	a {
+		color: #6cc0f7;
+		-webkit-transition: all 150ms ease-in-out;
+		-moz-transition: all 150ms ease-in-out;
+		-ms-transition: all 150ms ease-in-out;
+		-o-transition: all 150ms ease-in-out;
+		transition: all 150ms ease-in-out;
+		text-decoration: none !important;
+	}
+	
+	a:hover {
+		color: #fff;
+	}
+	.post-masonry {
+		margin-bottom: 30px;
+	}
+	
+	.post-masonry .post-thumb {
+		border: 10px solid #fff;
+		overflow: hidden;
+		position: relative;
+	}
+	
+	.post-masonry .post-thumb img {
+		width: 100%;
+		display: block;
+	}
+	
+	.post-masonry .post-thumb .title-over {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background: rgba(0,0,0,0.9);
+		padding: 15px 20px;
+	}
+	
+	.post-masonry .post-thumb .title-over h4 {
+		font-size: 16px;
+		font-family: 'robotoregular';
+	}
+	
+	.post-masonry .post-thumb .title-over a {
+		color: #fff;
+	}
+	
+	.post-masonry .post-thumb .post-hover {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 70px;
+		left: 0;
+		visibility: hidden;
+		opacity: 0;
+		background: rgba(0,0,0,0.9);
+		-webkit-transition: all 150ms ease-in-out;
+		-moz-transition: all 150ms ease-in-out;
+		-ms-transition: all 150ms ease-in-out;
+		-o-transition: all 150ms ease-in-out;
+		transition: all 150ms ease-in-out;
+	}
+	
+	.post-masonry .post-thumb .post-hover .inside {
+		position: relative;
+		top: 50%;
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+	
+	.post-masonry .post-thumb .post-hover h4 {
+		font-size: 16px;
+		font-family: 'robotoregular';
+		margin-bottom: 10px;
+	}
+	
+	.post-masonry .post-thumb .post-hover a {
+		color: #fff !important;
+	}
+	
+	.post-masonry .post-thumb .post-hover i {
+		display: block;
+		margin-bottom: 10px;
+	}
+	
+	.post-masonry .post-thumb .post-hover p {
+		font-size: 12px;
+	}
+	
+	.post-masonry .post-thumb .post-hover span {
+		font-size: 12px;
+		margin-bottom: 15px;
+		display: block;
+	}
+	
+	.post-masonry .post-thumb:hover .title-over {
+		-webkit-transition: all 150ms ease-in-out;
+		-moz-transition: all 150ms ease-in-out;
+		-ms-transition: all 150ms ease-in-out;
+		-o-transition: all 150ms ease-in-out;
+		transition: all 150ms ease-in-out;
+		visibility: hidden;
+		opacity: 0;
+		bottom: -50px;
+	}
+	
+	.post-masonry .post-thumb:hover .post-hover {
+		top: 0;
+		visibility: visible;
+		opacity: 1;
+	}
+	
+	.site-footer {
+		position: relative;
+		z-index: 8;
+		background: rgba(0,0,0,0.6);
+		padding: 40px 0;
+		margin-top: 60px;
+	}
+	
+	.site-footer .social-icons {
+		margin-bottom: 30px;
+	}
+	
+	.copyright-text {
+		font-size: 12px;
+	}
+	
+	.copyright-text a {
+		color: #bfbfbf;
+	}
+		</style>
+    </head>
+  <body style=" margin:0px; padding-top:25px;">
+<nav class=" navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+        	<div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class=" icon-bar"></span>
+                <span class=" icon-bar"></span>
+                <span class=" icon-bar"></span>
+            </button>
+               
+                <a class="navbar-brand">FLG<span></span></a>
+               
+            </div>
+            <div class="collapse navbar-collapse">
+                    <ul class=" nav navbar-nav" role="tablist" id="mytable" style="padding-left:50px">
+                       <li  ><a href="index.html">首页</a></li> 
+                        <li ><a href="fuwu.html">真诚服务</a></li> 
+                        <li class="active" ><a href="chanpin.html" role="menuitem" tabindex="-1">产品展示</a></li> 	
+                        <li><a href="huiyuan.html">会员作品</a></li> 
+                        <li role="presentation" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">关于我们<span class="caret"></span>                        	<ul class="dropdown-menu " role="menu" aria-labelledby="dropdMenu1">
+                                <li role="presentation"><a href="jianjie.html" role="menuitem" tabindex="-1">公司简介</a></li>
+                               	<li role="presentation"><a href="dongtai.html" role="menuitem" tabindex="-1">公司动态</a></li>
+                                <li role="presentation"><a href="#" role="menuitem" tabindex="-1">联系我们</a></li>
+                            </ul></a>
+                        
+                        </li>
+
+                    </ul>
+                <div class="navbar-form navbar-right" style="font-size:14px">
+                    <a href="#" class="navbar-link">注册</a>
+                    <a href="denglu.html" class="navbar-link">登陆</a>
+                    <input type="text" class=" form-control" placeholder="请输入关键字" />
+                    <button class="btn btn-primary">搜 索</button>
+                </div>
+             </div>
+        </div>
+    </nav>
+        <div class="main-posts"  style="padding-top:60px">
+            <div class="container">
+                <div class="row">
+                    <div class="blog-masonry masonry-true">
+                    <!--1-->
+                        <div class="post-masonry col-md-4 col-sm-6">
+                            <div class="post-thumb">
+                              <img src="images/春.jpeg" width="220px" height="350px" alt="">
+                                <div class="title-over">
+                                    <h4>主题-春天</h4>
+                                </div>
+                                <div class="post-hover text-center">
+                                    <div class="inside">
+                                        <i class="fa fa-plus"></i>
+                                        <span class="date">2012-4-5</span>
+                                        <h4>主题-春天</h4>
+                                        <p>春天的季节花儿开放，万物苏醒</p>
+                                         <p><a href="sanji1.html">更多>></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- /.post-masonry -->
+                        <div class="post-masonry col-md-4 col-sm-6">
+                            <div class="post-thumb">
+                               <img src="images/夏2.jpg" width="250px" height="300px" alt="">
+                                <div class="title-over">
+                                    <h4>主题-夏天</h4>
+                                </div>
+                                <div class="post-hover text-center">
+                                    <div class="inside">
+                                        <i class="fa fa-plus"></i>
+                                        <span class="date">2012-6-8</span>
+                                        <h4>主题-夏天</h4>
+                                        <p>夏天的季节骄阳似火，百花争艳</p>
+                                        <a href="sanji2.html">更多>></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- /.post-masonry -->
+                        <div class="post-masonry col-md-4 col-sm-6">
+                            <div class="post-thumb">
+                               <img src="images/秋.jpg" width="220px" alt="">
+                                <div class="title-over">
+                                    <h4>主题-秋天</h4>
+                                </div>
+                                <div class="post-hover text-center">
+                                    <div class="inside">
+                                        <i class="fa fa-plus"></i>
+                                        <span class="date">2012-9-3</span>
+                                        <h4>主题-秋天</h4>
+                                        <p>秋天的季节秋高气爽，心旷神怡</p>
+                                        <a href="sanji3.html">更多>></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- /.post-masonry -->
+                        <div class="post-masonry col-md-4 col-sm-6">
+                            <div class="post-thumb">
+                               <img src="images/冬2.jpg" width="220px" alt="">
+                                <div class="title-over">
+                                    <h4>主题-冬天</h4>
+                                </div>
+                                <div class="post-hover text-center">
+                                    <div class="inside">
+                                        <i class="fa fa-plus"></i>
+                                        <span class="date">2012-12-24</span>
+                                        <h4>主题-冬天</h4>
+                                        <p>冬天的季节漫天飘雪，白茫一片</p>
+                                        <a href="sanji4.html">更多>></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- /.post-masonry -->
+                        <div class="post-masonry col-md-4 col-sm-6">
+                            <div class="post-thumb">
+                                <img src="images/婚纱1.jpg" width="250px" height="300px" alt="">
+                                <div class="title-over">
+                                    <h4><a href="#">主题-婚礼</a></h4>
+                                </div>
+                                <div class="post-hover text-center">
+                                    <div class="inside">
+                                        <i class="fa fa-plus"></i>
+                                        <span class="date">2013-5-26</span>
+                                        <h4><a href="#">主题-婚礼</a></h4>
+                                        <p>婚礼的季节幸福美满，心情愉悦</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- /.post-masonry -->
+                        <div class="post-masonry col-md-4 col-sm-6">
+                            <div class="post-thumb">
+                                <img src="images/芳.jpg" width="220px" height="500px" alt="">
+                                <div class="title-over">
+                                    <h4><a href="#">主题-写真</a></h4>
+                                </div>
+                                <div class="post-hover text-center">
+                                    <div class="inside">
+                                        <i class="fa fa-plus"></i>
+                                        <span class="date">2013-4-23</span>
+                                        <h4><a href="#">主题-写真</a></h4>
+                                        <p>写真的季节花样百变，美丽大方</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- /.post-masonry -->
+                        <div class="post-masonry col-md-4 col-sm-6">
+                            <div class="post-thumb">
+                                <img src="images/卡片.jpg"  width="220px" alt="">
+                                <div class="title-over">
+                                    <h4><a href="#">主题-卡片</a></h4>
+                                </div>
+                                <div class="post-hover text-center">
+                                    <div class="inside">
+                                        <i class="fa fa-plus"></i>
+                                        <span class="date">2014-1-6</span>
+                                        <h4><a href="#">主题-卡片</a></h4>
+                                        <p>卡片的季节送上祝福，送上心愿</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- /.post-masonry -->
+                        <div class="post-masonry col-md-4 col-sm-6">
+                            <div class="post-thumb">
+                                <img src="images/大海.jpg" width="250px" height="300px" alt="">
+                                <div class="title-over">
+                                    <h4><a href="#">主题-大海</a></h4>
+                                </div>
+                                <div class="post-hover text-center">
+                                    <div class="inside">
+                                        <i class="fa fa-plus"></i>
+                                        <span class="date">2014-5-25</span>
+                                        <h4><a href="#">主题-大海</a></h4>
+                                        <p>大海的季节碧波荡漾 波涛汹涌</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- /.post-masonry -->
+                        <div class="post-masonry col-md-4 col-sm-6">
+                            <div class="post-thumb">
+                                <img src="images/小孩.jpg" width="220px" alt="">
+                                <div class="title-over">
+                                    <h4><a href="#">主题-儿童</a></h4>
+                                </div>
+                                <div class="post-hover text-center">
+                                    <div class="inside">
+                                        <i class="fa fa-plus"></i>
+                                        <span class="date">2015-2-20</span>
+                                        <h4><a href="#">主题-儿童</a></h4>
+                                        <p>儿童的季节天真无邪，烂漫可爱</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- /.post-masonry -->
+                    </div>
+                </div>
+            </div>
+            <div class="roll" id="roll">  
+    <div class="container-fluid" style=" height:150px;padding-top:50px; padding-left:0px; padding-right:0px; background-color: #000">
+        	<p  style="text-align:center; color:#CCC">2015 fengniao.com. All rights reserved. FLG摄影工作室　版权所有 侵权必究</p>
+            <p  style="text-align:center; color:#CCC">@作者：刘韩 冯佳节 郭倩</p>
+            <p  style="text-align:center; color:#CCC">2015年12月份完成</p>
+    </div>
+    </div>
+        </div>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.min.js"></script>
+        <script src="js/main.min.js"></script>
+
+        <!-- Preloader -->
+        <script type="text/javascript">
+            //<![CDATA[
+            $(window).load(function() { 
+                $('#loader').fadeOut();
+                    $('#loader-wrapper').delay(350).fadeOut('slow'); 
+                $('body').delay(350).css({'overflow-y':'visible'});
+            })
+        </script>
+
+    <script  src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+	
+
+	$('.carousel').carousel('next');
+	$('#mytable a').click(function(e){
+		$(this).tab("show");
+		})
+
+</script>
+	<!-- templatemo 434 masonry -->
+    </body>
+</html>
